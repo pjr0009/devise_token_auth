@@ -190,6 +190,9 @@ Devise.setup do |config|
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
+  
+  # Enable username authentication.
+  config.authentication_keys = [ :login ]
 
   # don't serialize tokens
   Devise::Models::Authenticatable::BLACKLIST_FOR_SERIALIZATION << :tokens
